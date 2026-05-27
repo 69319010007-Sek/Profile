@@ -1,50 +1,65 @@
 # Profile
 Hello I am Sek54
 # 👋 ยินดีต้อนรับสู่ GitHub ของผม/ดิฉัน [ใส่ชื่อของคุณที่นี่]
-https://rms.bncc.ac.th/files/importpicstd/01/69319010007.jpg
-### 🎓 ข้อมูลการศึกษา
+
+<div align="center">
+  <!-- เปลี่ยนลิงก์รูปภาพใน src เป็นรูปของคุณได้เลย -->
+  <img src="https://rms.bncc.ac.th/files/importpicstd/01/69319010007.jpg" width="150" height="150" style="border-radius: 50%; border: 2px solid #007BFF;" alt="Profile Picture">
+  
+  ### "มุ่งมั่นพัฒนาทักษะ Backend เพื่อสร้างสรรค์เทคโนโลยีที่ตอบโจทย์อนาคต"
+</div>
+
+---
+
+## 🎓 ประวัติการศึกษาและการเรียนรู้
 * **สถาบัน:** วิทยาลัยพณิชยการบางนา (Bangna Commercial College)
 * **สาขาวิชา:** เทคโนโลยีสารสนเทศ (Information Technology)
-* **วิชาที่กำลังเน้น:** การพัฒนาส่วนหลัง (Backend Development)
+* **วิชาที่กำลังเน้นย้ำ:** การพัฒนาเว็บส่วนหลัง (Backend Development)
 
 ---
 
 ## 🎯 จุดประสงค์ในการเข้าศึกษาต่อ
-ผม/ดิฉัน มีความมุ่งมั่นที่จะพัฒนาทักษะด้านการเขียนโปรแกรมและการจัดการระบบฐานข้อมูล โดยเฉพาะในสาขา **เทคโนโลยีสารสนเทศ** เพื่อเป้าหมายดังนี้:
-1.  **เข้าใจโครงสร้างระบบ:** เรียนรู้การทำงานของ Server-side และการจัดการ Logic ที่ซับซ้อน
-2.  **ต่อยอดทักษะ Backend:** พัฒนา Web Application ที่มีประสิทธิภาพและปลอดภัย
-3.  **เตรียมความพร้อมสู่สายอาชีพ:** ฝึกฝนการทำงานร่วมกับผู้อื่นผ่านระบบ Version Control (Git) เพื่อเป็นนักพัฒนาซอฟต์แวร์ในอนาคต
+เหตุผลและความมุ่งมั่นในการเข้าศึกษาต่อในสาขาเทคโนโลยีสารสนเทศ และการเลือกเรียนวิชา Backend มีดังนี้:
+
+### 1. การสร้างรากฐานด้านเทคโนโลยีที่แข็งแกร่ง
+* เพื่อทำความเข้าใจโครงสร้างพื้นฐานของระบบเครือข่ายและซอฟต์แวร์อย่างเป็นระบบ
+* นำความรู้จากวิทยาลัยพณิชยการบางนาไปประยุกต์ใช้ในการแก้ปัญหาจริงในโลกการทำงาน
+
+### 2. ความหลงใหลในระบบเบื้องหลัง (Backend Web Development)
+* **จัดการข้อมูลอย่างมีประสิทธิภาพ:** ต้องการเรียนรู้วิธีการออกแบบฐานข้อมูล (Database) และการประมวลผลที่มีความเสถียร
+* **ความปลอดภัยของระบบ:** มุ่งเน้นการศึกษาเรื่องความปลอดภัยของข้อมูลและการพิสูจน์ตัวตน (Authentication)
+* **การสร้าง API:** เพื่อให้ระบบหน้าบ้าน (Frontend) และหลังบ้านสามารถทำงานร่วมกันได้อย่างไร้รอยต่อ
 
 ---
 
-## 💻 ทักษะและความสนใจ (Interests)
-### 🛠️ Backend Development
-* **Language:** JavaScript (Node.js)
+## 💻 ทักษะและเครื่องมือที่กำลังศึกษา (Skills & Tools)
+### หัวข้อย่อยด้านเทคนิค:
+* **Language:** JavaScript (ES6+)
+* **Runtime:** Node.js
 * **Framework:** Express.js
-* **Database:** MongoDB, MySQL
-
-### ⚙️ Tools & Workflow
-* Git / GitHub
-* Postman (สำหรับทดสอบ API)
-* VS Code
+* **Database:** MySQL / MongoDB
+* **Tools:** Git, GitHub, Postman, VS Code
 
 ---
 
 ## 🚀 ตัวอย่างการเขียน Code ด้วย Node.js
-นี่คือตัวอย่างการสร้าง **Simple Web Server** เบื้องต้นโดยใช้ Express.js:
+นี่คือตัวอย่างโค้ดสร้าง Server เบื้องต้นด้วย Node.js และ Express.js สำหรับส่งข้อความทักทายผู้ใช้งาน:
 
 ```javascript
-// นำเข้า Library express
+// 1. เรียกใช้งาน Express Framework
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
-// สร้าง Route สำหรับหน้าแรก
+// 2. กำหนด Route สำหรับหน้าแรก (Homepage)
 app.get('/', (req, res) => {
-  res.send('สวัสดีครับ! ยินดีต้อนรับเข้าสู่ระบบ Backend ของผม');
+    res.json({
+        message: "สวัสดีครับ! ยินดีต้อนรับเข้าสู่ Backend Server ของผม/ดิฉัน",
+        status: "Success",
+        college: "Bangna Commercial College"
+    });
 });
 
-// เริ่มต้นการทำงานของ Server
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
+// 3. สั่งให้ Server ทำงานตาม พอร์ต (Port) ที่กำหนด
+app.listen(PORT, () => {
+    console.log(`🚀
